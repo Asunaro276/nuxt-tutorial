@@ -1,0 +1,117 @@
+openapi: 3.1.0
+x-stoplight:
+  id: llxz7ib2v5lrb
+info:
+  title: api
+  version: '1.0'
+  description: nuxt-tutorialのAPI
+  contact:
+    name: Nakano Ryuhei
+    email: ryuhei276276@gmail.com
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /api/product:
+    parameters: []
+    get:
+      summary: get all products
+      operationId: get-api-product
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  products:
+                    type: array
+                    x-stoplight:
+                      id: 22qd49su8avp1
+                    items:
+                      $ref: '#/components/schemas/Product'
+                      x-stoplight:
+                        id: xbz4f8l0kyxt1
+                  totalCount:
+                    type: number
+                    x-stoplight:
+                      id: i9qghkb2mpexf
+                required:
+                  - products
+                  - totalCount
+              examples:
+                Example 1:
+                  value:
+                    products:
+                      - id: 1
+                        name: sample1
+                        detail: sample detail1
+                        price: 100
+                        quantity: 10
+                        brand_name: sample brand1
+                        category_name: sample category1
+                      - id: 2
+                        name: sample2
+                        detail: sample detail2
+                        price: 200
+                        quantity: 20
+                        brand_name: sample brand2
+                        category_name: sample categor2y
+                      - id: 3
+                        name: sample3
+                        detail: sample detail3
+                        price: 300
+                        quantity: 30
+                        brand_name: sample brand3
+                        category_name: sample category3
+                    totalCount: 0
+      description: productの一覧を取得
+components:
+  schemas:
+    Product:
+      title: Product
+      type: object
+      examples:
+        - id: 142
+          firstName: Alice
+          lastName: Smith
+          email: alice.smith@gmail.com
+          dateOfBirth: '1997-10-31'
+          emailVerified: true
+          signUpDate: '2019-08-24'
+      x-stoplight:
+        id: ji0osoca2xblt
+      properties:
+        id:
+          type: integer
+          x-stoplight:
+            id: hnwcj1lrnvu1j
+        name:
+          type: string
+          x-stoplight:
+            id: j3no4efqzsh4e
+        category:
+          type: string
+          x-stoplight:
+            id: d7lzt3ujyrch1
+        brand:
+          type: string
+          x-stoplight:
+            id: mzl3dtdfai075
+        quantity:
+          type: integer
+          x-stoplight:
+            id: t8wwtbwqvy8id
+        price:
+          type: integer
+          x-stoplight:
+            id: 1hf8yirz4d78v
+      required:
+        - id
+        - name
+        - category
+        - brand
+        - quantity
+        - price
+  securitySchemes: {}
+x-internal: false

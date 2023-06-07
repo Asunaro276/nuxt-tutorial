@@ -3490,7 +3490,7 @@ open@^8.4.0:
     is-docker "^2.1.1"
     is-wsl "^2.2.0"
 
-openapi-typescript@^6.2.4:
+openapi-typescript@^6.2.4, openapi-typescript@^6.2.6:
   version "6.2.6"
   resolved "https://registry.yarnpkg.com/openapi-typescript/-/openapi-typescript-6.2.6.tgz#26054057f0e3dee594b69b0e014fe8a05a0162cc"
   integrity sha512-UKLdIwn5Yo0NXx+33H4trIihn/cZAYZo5U+PYD4uYWvBD+mRsEBbXz3gUbeNdgP4Uyv9X6Z8FMx7C08PQI3lcw==
